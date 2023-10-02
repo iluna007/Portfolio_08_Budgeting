@@ -16,11 +16,13 @@ export const BudgetProvider = ({children} : BudgetProviderProps) => {
 
     const [state, dispatch] = useReducer(budgetReducer, initialState)
 
+    const auth = true
     return (
         <BudgetContext.Provider
             value={{
                 state,
-                dispatch
+                dispatch,
+                auth
             }}
         >
             {children}
