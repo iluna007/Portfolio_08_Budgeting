@@ -6,7 +6,6 @@ import 'react-calendar/dist/Calendar.css'
 import 'react-date-picker/dist/DatePicker.css'
 
 
-
 export default function ExpenseForm() {
     const [expense, setExpense] = useState<DraftExpense>({
         amount: 0,
@@ -77,6 +76,7 @@ export default function ExpenseForm() {
                 >Fecha Gasto:</label>
                 <DatePicker
                     className="bg-slate-100 p-2 border-0"
+                    value={expense.date}
                 />
             </div>
 
